@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           .brd-cap {
+            float: left;
+            font-size: 10rem;
+            font-weight: 900;
+            color: hsl(330, 80%,51%);
+            width: 0.75em;
+            text-shadow: .01em .025em 0 #F9F6EF;
+            position: relative;
+           }
+           .brd-cap::before{
+            display: inline-grid;
+            place-content: center;
+            content: attr(shape);
+            position: absolute;
+            width: 1ch;
+            height: 1em;
+            top: 0.26em;
+            left: 0.07em;
+            color: transparent;
+            text-shadow: none;
+            -webkit-text-stroke: 1px #ff389c80;
+            text-stroke: 1px #ff389c80;
+            z-index: -1;
+            background-position: -1em;
+            background-size: .05em .05em;
+            background-image: repeating-linear-gradient(45deg,#ff389c 0,#ff389c 25%,#F9F6EF 0,#F9F6EF 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+           }
+           p{
+            line-height: 1.4;
+           }
+           p span{
+            font-weight: 100;
+           }
+           body{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            background-color: #F9F6EF;
+            color: #1f2020;
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-content: center;
+           }
+        </style>
+    </head>
+    <body>
+        <p>
+            <span class="brd-cap" shape="S">S</span>
+        </p>
+    </body>
+</html>

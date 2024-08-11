@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                background-color:black;
+            }
+            .heart-icon {
+                cursor: pointer;
+                transition: 300ms;
+            }
+            .heart-icon:hover {
+                scale:5.2;
+            }
+            #heart {
+                width: 90px;
+                height: 90px;
+            }
+            path {
+                transition: 200ms;
+                fill:transparent;
+            }
+            .filled {
+                fill:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heart-icon" id="heart">
+            <svg viewBox="-1 -1 34 32">
+                <path d="M23.6,0C20.9,0,18.4,
+                1.6,17,4.1C15.6,1.6,13.1,0,10.4
+                ,0C4.6,0,0,4.6,0,10.4c0,8.1,
+                12.9,15.2,16,18.5
+                c3.1-3.3,16-10.4,16-18.5C32,4.6
+                27.4,0,23.6,0z" stroke="red"
+                stroke-width="1"/>
+            </svg>
+        </div>
+        <script>
+            document.getElementById('heart').addEventListener('click',
+            function() {
+                var path = this.querySelector('path');
+                path.classList.toggle('filled');
+                
+            });
+
+        </script>
+    </body>
+</html>
